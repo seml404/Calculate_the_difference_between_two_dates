@@ -1,0 +1,138 @@
+@use "sass:color";
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+//
+
+@mixin font($size, $weight, $lineHeight) {
+  font-family: "Roboto";
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+  color: #004a43;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  max-width: 1440px;
+  background: #f1f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .central_part {
+    width: 100%;
+    background: #ffffff;
+    height: 100%;
+    max-height: 905px;
+  }
+
+  h1 {
+    @include font(32px, 700, 48px);
+    text-align: center;
+    padding-top: 64px;
+    padding-bottom: 44px;
+  }
+
+  .steps {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .step {
+    width: 100%;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .instruction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 0.1875em solid #fa70b6;
+    border-radius: 50%;
+    box-shadow: 0.175em 0.175em 0 0 rgba(15, 28, 63, 0.125);
+    height: 48px;
+    width: 48px;
+  }
+
+  h2 {
+    @include font(18px, 700, 24px);
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .circle_2 {
+    border: 0.1875em solid #58d1bd;
+  }
+
+  .circle_3 {
+    border: 0.1875em solid #7d77fc;
+  }
+  .form_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  input {
+    width: 100%;
+    max-width: 360px;
+    height: 45px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    border: 1px solid #a4a4a4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 16px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #b1b1b1;
+  }
+
+  button {
+    background: #ffad3d;
+    width: 100%;
+    width: 379px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+  }
+
+  .button_text {
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    margin-right: 20px;
+    padding-top: 22px;
+    margin-bottom: 21px;
+    text-transform: uppercase;
+  }
+
+  .result {
+    margin: 0 auto;
+    margin-top: 40px;
+    background: #ffffff;
+    width: 100%;
+    width: 379px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #a4a4a4;
+    @include font(18px, 700, 24px);
+    color: darkgrey;
+  }
+}
